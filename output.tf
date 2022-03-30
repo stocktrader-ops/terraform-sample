@@ -1,3 +1,3 @@
 output "template_file" {
-    value = data.template_file.test.rendered
+    value = "Host curled ${var.hostname}
 }
