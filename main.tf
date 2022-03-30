@@ -1,9 +1,24 @@
-# Create an arbitrary local resource
-resource "null_resource" "curl-host" {  
-  provisioner "local-exec" {
-    command = <<-EOT
-      echo "Curling ${var.hostname}"
-      curl -v -k https://${var.hostname}
-    EOT
+terraform {
+  required_providers {
+    http = {
+      source = "hashicorp/http"
+      version = "2.1.0"
+    }
+  }
+}
+
+provider "http" {
+  # Configuration options
+}
+
+
+
+# curl resource
+data "http" "example" {
+  url = "${var.hostname}"
+
+  # Optional request headers
+  request_headers = {
+    Accept = "application/json"
   }
 }
