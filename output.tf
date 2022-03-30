@@ -1,3 +1,3 @@
 output "template_file" {
-    value = "Host curled ${var.hostname}
+    value = "Host curled ${var.hostname}"
 }
