@@ -1,4 +1,9 @@
 # Create an arbitrary local resource
-data "template_file" "test" {
-  template = "Hello ${var.name}!"
+resource "null_resource" "curl-host" {  
+  provisioner "local-exec" {
+    command = <<-EOT
+      echo "Curling ${var.hostname}"
+      curl -v -k https://${var.name}
+    EOT
+  }
 }
