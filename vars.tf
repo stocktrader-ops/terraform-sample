@@ -1,6 +1,6 @@
 # Configure these variables
 
-variable "name" {
-  description = "The name to pass to the template."
-  default     = "world"
+variable "hostname" {
+  description = "Hostname to curl"
+  default     = "https://www.ibm.com"
 }
