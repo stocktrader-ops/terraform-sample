@@ -1,8 +1,25 @@
+# official terraform provider - doesnt support insecure flag for https
+# terraform {
+#   required_providers {
+#     http = {
+      
+#       source = "hashicorp/http"
+#       version = "2.1.0"
+#     }
+#   }
+# }
+
+# provider "http" {
+#   # Configuration options
+# }
+
+
+
 terraform {
   required_providers {
     http = {
-      source = "hashicorp/http"
-      version = "2.1.0"
+      source = "terraform-aws-modules/http"
+      version = "2.4.1"
     }
   }
 }
@@ -21,4 +38,5 @@ data "http" "example" {
   request_headers = {
     Accept = "application/json"
   }
+  insecure = true
 }
