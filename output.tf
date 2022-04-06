@@ -1,8 +1,7 @@
-output "template_file" {
-    value = "Host curled ${var.hostname}"
 
+output "datacenter_id" {
+    value = data.vsphere_datacenter.dc.id
 }
-
-output "httpbody" {
-    value = data.http.example.body
+output "vm_id" {
+    value = vsphere_virtual_machine.vm.id
 }
