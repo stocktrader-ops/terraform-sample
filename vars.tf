@@ -51,3 +51,8 @@ variable "doamin-name" {
   description = "domain name"
   default     = "sanfran.pbm.ihost.com"
 }
+variable "dns_server_list" {
+  type    = list(string)
+  description = "list of dns servers"
+  default = ["129.40.110.144", "8.8.8.8"]
+}
