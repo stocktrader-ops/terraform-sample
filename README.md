@@ -1,4 +1,4 @@
-# terraform-sample
+# Deploying vSphere VM via Terraform
 ## Contents:
 1. [Overview](#overview)
 2. [Prerequisites](#prerequisites)
